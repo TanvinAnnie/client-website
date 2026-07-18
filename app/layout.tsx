@@ -1,18 +1,8 @@
-import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
+import TopBar from "@/components/layout/Topbar";
+import Navbar from "@/components/layout/Navbar";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
-});
-
-export const metadata: Metadata = {
-  title: "Insurance System",
-  description: "Insurance Management System",
-};
-
+import Footer from "@/components/footer/Footer";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,8 +10,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
+      <body>
+        <TopBar />
+        <Navbar />
         {children}
+         <Footer />
       </body>
     </html>
   );

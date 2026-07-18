@@ -4,7 +4,7 @@ import {
   Plane,
   Users,
   Ship,
-  HardHat,
+  Wrench,
   MoreHorizontal,
 } from "lucide-react";
 
@@ -42,7 +42,7 @@ export const insuranceTypes = [
   {
     id: 6,
     title: "Engineering",
-    icon: HardHat,
+    icon: Wrench,
     active: false,
   },
   {

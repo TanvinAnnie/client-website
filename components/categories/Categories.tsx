@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import CategoryCard from "./CategoryCard";
 import { categories } from "@/constants/categories";
 

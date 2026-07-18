@@ -6,7 +6,7 @@ export default function Logo() {
     <Link href="/">
       <Image
         src="/images/logo/logo.png"
-        alt="Logo"
+        alt="Insurance Logo"
         width={220}
         height={70}
         priority

@@ -1,35 +1,28 @@
 "use client";
 
-import InsuranceTab from "./InsuranceTab";
-import QuoteForm from "./QuoteForm";
+import { LucideIcon } from "lucide-react";
 
-import { insuranceTypes } from "@/constants/insurance";
+interface InsuranceTabProps {
+  title: string;
+  icon: LucideIcon;
+  active: boolean;
+}
 
-export default function InsuranceTabs() {
+export default function InsuranceTab({
+  title,
+  icon: Icon,
+  active,
+}: InsuranceTabProps) {
   return (
-    <section className="bg-[#FBF2EF] py-16">
-      <div className="mx-auto max-w-7xl px-6">
-
-        {/* Tabs */}
-
-        <div className="flex flex-wrap items-center justify-center gap-8">
-
-          {insuranceTypes.map((item) => (
-            <InsuranceTab
-              key={item.id}
-              title={item.title}
-              icon={item.icon}
-              active={item.active}
-            />
-          ))}
-
-        </div>
-
-        {/* Form */}
-
-        <QuoteForm />
-
-      </div>
-    </section>
+    <button
+      className={`flex items-center gap-2 rounded-lg px-5 py-3 transition ${
+        active
+          ? "bg-blue-600 text-white"
+          : "bg-white text-gray-700 border"
+      }`}
+    >
+      <Icon size={20} />
+      <span>{title}</span>
+    </button>
   );
 }
